@@ -3,13 +3,14 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    background: url('image.jpg') center/cover no-repeat fixed;
+/*body{
+   
     background-color: #c9d6ff;
     font-family:'Outfit';
    
-}
-.contact-container{
+}*/
+.contact-container{ 
+    background: url('image.jpg') center/cover no-repeat fixed;
     height: 100vh;
     display: flex;
     align-items: center;
