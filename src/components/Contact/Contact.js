@@ -1,49 +1,20 @@
 import React from 'react';
+import './Contact.css'; // Make sure to adjust the path to your CSS file
 
 const ContactForm = () => {
   return (
-    <div className="container-contact">
-      <div className="content">
-        <div className="left-side">
-          <div className="address details">
-            <i className="fas fa-map-marker-alt"></i>
-            <div className="topic">Address</div>
-            <div className="text-one">Building 5, Nagole</div>
-            <div className="text-two">Hyderabad</div>
-          </div>
-          <div className="Phone details">
-            <i className="fas fa-phone-alt"></i>
-            <div className="topic">Phone</div>
-            <div className="text-one">+91 7731995185</div>
-            <div className="text-two">+91 8309433815</div>
-            <div className="text-three">+91 8106489338</div>
-          </div>
-          <div className="Email details">
-            <i className="fas fa-envelope"></i>
-            <div className="topic">Email</div>
-            <div className="text-one">mentalhealth24@gmail.com</div>
-            <div className="text-two">info.mentalhealth@gmail.com</div>
-          </div>
+    <div className="contact-container">
+      <form action="https://api.web3forms.com/submit" method="POST" className="contact-left">
+        <div className="contact-left-title">
+          <h2>Contact us here</h2>
+          <hr />
         </div>
-        <div className="right-side">
-          <div className="topic-text">Send us a message</div>
-          <p>If you have any queries you can send us a message here</p>
-        </div>
-        <form action="#">
-          <div className="input-box">
-            <input type="text" placeholder="Enter your name" />
-          </div>
-          <div className="input-box">
-            <input type="text" placeholder="Enter your email" />
-          </div>
-          <div className="input-box message-box">
-            <textarea></textarea>
-          </div>
-          <div className="button">
-            <input type="button" value="Send Now" />
-          </div>
-        </form>
-      </div>
+        <input type="hidden" name="access_key" value="de85d3a6-6f70-4f06-bcae-9852d702b1dc" />
+        <input type="text" name="name" placeholder="Your Name" className="contact-inputs" required />
+        <input type="email" name="email" placeholder="Your email" className="contact-inputs" required />
+        <textarea name="message" placeholder="Your message" className="contact-inputs required"></textarea>
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
 };
