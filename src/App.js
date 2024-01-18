@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Navbar from './components/Navbar/navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Home/Home';
+import Assessment from './components/Assessment/Assessment';
+import Result from './components/Result/Result';
+import Contact from './components/Contact/Contact';
+import Login from './components/Login/Login';
+import Forget from './components/Forget/Forget';
+const App = () => {
+    return (
+        <Router>
+            <Navbar />
+            <Routes>
+                <Route path="/" exact element={<Home />} />
+                <Route path="/Assessment" element={<Assessment />} />
+                <Route path="/Result" element={<Result />} />
+                <Route path="/Contact" element={<Contact />} />
+                <Route path="/Login" element={<Login />} />
+                <Route path='/Forget' element={<Forget />} />
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;
+// npm install react-router-dom
+// component router v4 and element router v6
